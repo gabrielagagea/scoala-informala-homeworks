@@ -15,7 +15,7 @@ class DeliveryVehicle extends TransportationVehicle{
 
 }
 class TransportVehicle extends TransportationVehicle{
-    
+
 }
 
 

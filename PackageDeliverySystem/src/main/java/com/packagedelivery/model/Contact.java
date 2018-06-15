@@ -1,9 +1,14 @@
 package com.packagedelivery.model;
 
+/**
+ * Class Contact has the atributs: name, adress and phone
+ */
 public class Contact {
     private String name;
     private Address address;
     private String phone;
+
+//Methods for getting and setting: the name, adress and the phone number
 
     public String getName() {
         return name;

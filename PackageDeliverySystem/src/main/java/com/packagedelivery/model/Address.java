@@ -1,10 +1,16 @@
 package com.packagedelivery.model;
 
+/**
+ * We have public class Address with attributes: country, city, street and zipCode.
+ * We can identify the contact and the destination
+ */
 public class Address {
     private String country;
     private String city;
     private String street;
     private String zipCode;
+    //Methods for getting and setting the country, the city, the street and the zipCode.
+    // Not sure yet which one will be use
 
     public String getCountry() {
         return country;

@@ -2,12 +2,17 @@ package com.packagedelivery.model;
 
 import java.util.Set;
 
+/**
+ * Class PackageDeliverySystem with the attributes: administrators, packages, facilities and filterQueue
+ */
 public class PackageDeliverySystem {
 
     private Set<User> administators;
     private Set<Package> packages;
     private Set<Facility> facilities;
     private FilterQueue filterQueue;
+
+//Methods for setting or getting the administrators, packages, facilities and filterQueue
 
     public Set<User> getAdministators() {
         return administators;

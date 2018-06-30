@@ -1,5 +1,6 @@
 package com.packagedelivery.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -11,6 +12,14 @@ public class PackageDeliverySystem {
     private Set<Package> packages;
     private Set<Facility> facilities;
     private FilterQueue filterQueue;
+
+    public PackageDeliverySystem() {
+        this.administators = new HashSet<>();
+        this.packages = new HashSet<>();
+        this.facilities = new HashSet<>();
+        this.filterQueue = new FilterQueue();
+    }
+
 
 //Methods for setting or getting the administrators, packages, facilities and filterQueue
 

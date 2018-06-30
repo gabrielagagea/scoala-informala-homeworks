@@ -12,6 +12,7 @@ public class Facility {
 // Methods for setting transportationVehicles and the town where the package is going
 
     public Set<TransportationVehicle> getTransportationVehicle() {
+
         return transportationVehicle;
     }
 

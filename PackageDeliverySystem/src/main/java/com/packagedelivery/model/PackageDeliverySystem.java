@@ -19,8 +19,6 @@ public class PackageDeliverySystem {
         this.facilities = new HashSet<>();
         this.filterQueue = new FilterQueue();
     }
-
-
 //Methods for setting or getting the administrators, packages, facilities and filterQueue
 
     public Set<User> getAdministators() {

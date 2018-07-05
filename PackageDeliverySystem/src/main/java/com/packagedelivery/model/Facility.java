@@ -1,5 +1,6 @@
 package com.packagedelivery.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -9,7 +10,10 @@ public class Facility {
     private Set<TransportationVehicle> transportationVehicle;
     private String town;
 
-// Methods for setting transportationVehicles and the town where the package is going
+    public Facility(Set<TransportationVehicle> transportationVehicle, String town) {
+        this.transportationVehicle = transportationVehicle;
+        this.town = town;
+    }
 
     public Set<TransportationVehicle> getTransportationVehicle() {
 

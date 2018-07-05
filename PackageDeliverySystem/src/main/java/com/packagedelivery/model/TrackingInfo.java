@@ -5,12 +5,8 @@ package com.packagedelivery.model;
  */
 public class TrackingInfo {
 
-    //attributes id and details for getting the TrackingInfo
-
     private String id;
     private String details;
-
-// I have here lots of methods. I'm not sure jet which one will be use
 
     public String getId() {
         return id;

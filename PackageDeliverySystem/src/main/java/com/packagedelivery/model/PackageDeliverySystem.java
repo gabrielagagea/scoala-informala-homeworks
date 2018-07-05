@@ -8,18 +8,20 @@ import java.util.Set;
  */
 public class PackageDeliverySystem {
 
-    private Set<User> administators;
-    private Set<Package> packages;
-    private Set<Facility> facilities;
-    private FilterQueue filterQueue;
+    private Set<User> administators = new HashSet<>();
+    private Set<Package> packages = new HashSet<>();
+    private Set<Facility> facilities = new HashSet<>();
+    private FilterQueue filterQueue = new FilterQueue();
 
-    public PackageDeliverySystem() {
-        this.administators = new HashSet<>();
-        this.packages = new HashSet<>();
-        this.facilities = new HashSet<>();
-        this.filterQueue = new FilterQueue();
+    public Set<Route> getRoutes() {
+        return routes;
     }
-//Methods for setting or getting the administrators, packages, facilities and filterQueue
+
+    public void setRoutes(Set<Route> routes) {
+        this.routes = routes;
+    }
+
+    private Set<Route> routes = new HashSet<>();
 
     public Set<User> getAdministators() {
         return administators;
@@ -58,8 +60,26 @@ public class PackageDeliverySystem {
         return null;
     }
 
-    public void pickupPackage(String trackingId) {
+    private Package getPackageByTrackingId(String trackingId) {
+        for (Package p : packages) {
+            if (p.getTrackingId().equals(trackingId)) {
+                return p;
+            }
+        }
 
+        return null;
+    }
+
+    public void pickupPackage(String trackingId) throws Exception {
+
+        Package p = getPackageByTrackingId(trackingId);
+        if (p == null) {
+            throw new PackageDeliveryException("Invalid tracking Id");
+        }
+        Route packageRoute = p.getRoute();
+        if(!routes.contains(packageRoute)){
+            throw new PackageDeliveryException("Invalid package route");
+        }
     }
 
     public void addFacility(String town, Set<TransportationVehicle> transportationVehicles) {

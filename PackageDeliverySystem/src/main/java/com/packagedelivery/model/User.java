@@ -6,12 +6,8 @@ package com.packagedelivery.model;
  */
 public class User {
 
-    // Users are different. They have id and name attribute
-
     private String id;
     private String name;
-
-    // Methods for getting and setting the id and the name
 
     public String getId() {
         return id;

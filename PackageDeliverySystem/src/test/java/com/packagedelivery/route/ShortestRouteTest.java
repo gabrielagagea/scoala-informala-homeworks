@@ -19,7 +19,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class ShortestRouteTest {
 
-    ShortestRoute shortestRoute;
+   ShortestRoute shortestRoute;
 
     @Before
     public void setUp() throws Exception {
@@ -51,7 +51,7 @@ public class ShortestRouteTest {
         edges.add(new ShortestRoute.Edge("Targu Mures", "Sighisoara", 53));
         edges.add(new ShortestRoute.Edge("Sighisoara", "Brasov", 118));
         /* Let us create the example graph discussed above */
-        shortestRoute.setEdges(edges);
+      shortestRoute.setEdges(edges);
     }
 
     @Test

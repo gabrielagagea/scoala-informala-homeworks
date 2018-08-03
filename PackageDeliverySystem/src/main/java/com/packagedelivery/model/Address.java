@@ -1,16 +1,33 @@
 package com.packagedelivery.model;
 
+import java.io.Serializable;
+
 /**
  * We have public class Address with attributes: country, city, street and zipCode.
  * We can identify the contact and the destination
  */
-public class Address {
+public class Address implements  Serializable {
     private String country;
     private String city;
     private String street;
     private String zipCode;
-    //Methods for getting and setting the country, the city, the street and the zipCode.
-    // Not sure yet which one will be use
+
+    public Address(String country, String city, String street, String zipCode) {
+        this.country = country;
+        this.city = city;
+        this.street = street;
+        this.zipCode = zipCode;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
 
     public String getCountry() {
         return country;

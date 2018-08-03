@@ -1,14 +1,29 @@
 package com.packagedelivery.model;
 
+import java.io.Serializable;
+
 /**
  * Class Contact has the atributs: name, adress and phone
  */
-public class Contact {
+public class Contact implements Serializable {
     private String name;
     private Address address;
     private String phone;
 
-//Methods for getting and setting: the name, adress and the phone number
+    public Contact(String name, Address address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "name='" + name + '\'' +
+                ", address=" + address +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 
     public String getName() {
         return name;

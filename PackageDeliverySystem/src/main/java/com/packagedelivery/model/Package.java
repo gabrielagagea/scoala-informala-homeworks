@@ -1,5 +1,6 @@
 package com.packagedelivery.model;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import java.util.List;
  * Public class Package. The class has a trackingId, sender and destination attribute
  */
 
-public class Package {
+public class Package implements Serializable  {
     private String trackingId;
     private Sender sender;
     private Destination destination;
@@ -17,6 +18,17 @@ public class Package {
         this.trackingId = trackingId;
         this.sender = sender;
         this.destination = destination;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Package{" +
+                "trackingId='" + trackingId + '\'' +
+                ", sender=" + sender +
+                ", destination=" + destination +
+                ", route=" + route +
+                '}';
     }
 
     public String getTrackingId() {
@@ -50,6 +62,8 @@ public class Package {
     public void setRoute(Route route) {
         this.route = route;
     }
+
+
 }
 
 

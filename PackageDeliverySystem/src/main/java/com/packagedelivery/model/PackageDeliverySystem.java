@@ -11,7 +11,7 @@ public class PackageDeliverySystem {
     private Set<User> administators = new HashSet<>();
     private Set<Package> packages = new HashSet<>();
     private Set<Facility> facilities = new HashSet<>();
-    private FilterQueue filterQueue = new FilterQueue();
+    private FilterQueue filterQueue = new FilterQueue("T");
 
     public Set<Route> getRoutes() {
         return routes;
@@ -66,7 +66,6 @@ public class PackageDeliverySystem {
                 return p;
             }
         }
-
         return null;
     }
 

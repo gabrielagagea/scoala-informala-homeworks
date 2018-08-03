@@ -1,19 +1,29 @@
 package com.packagedelivery.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
+import java.util.*;
 
 /**
  * I made an abstract class TransportationVehicle with the attribute maxPackages
  * and a method for sorting the packages. I have 3 classes that extends this class.
  */
-public abstract class TransportationVehicle {
+public abstract class TransportationVehicle implements Serializable {
     private int maxPackages;
     private List<Package> packages = new ArrayList<>();
 
-    public TransportationVehicle(int maxPackages, List<Package> packages) {
+    public TransportationVehicle(int maxPackages)  {
         this.maxPackages = maxPackages;
-        this.packages = packages;
+    }
+    public void addPackages(Set<Package> packages){
+        this.packages.addAll(packages);
+    }
+
+    @Override
+    public String toString() {
+        return "TransportationVehicle{" +
+                "maxPackages=" + maxPackages +
+                ", packages=" + packages +
+                '}';
     }
 
     public int getMaxPackages() {
@@ -21,25 +31,8 @@ public abstract class TransportationVehicle {
     }
 }
 
-class PickupVehicle extends TransportationVehicle {
 
-    public PickupVehicle(int maxPackages, List<Package> packages) {
-        super(maxPackages, packages);
-    }
-}
 
-class DeliveryVehicle extends TransportationVehicle {
 
-    public DeliveryVehicle(int maxPackages, List<Package> packages) {
-        super(maxPackages, packages);
-    }
-}
-
-class TransportVehicle extends TransportationVehicle {
-
-    public TransportVehicle(int maxPackages, List<Package> packages) {
-        super(maxPackages, packages);
-    }
-}
 
 

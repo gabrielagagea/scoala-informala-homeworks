@@ -1,22 +1,22 @@
 package com.packagedelivery.model;
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
  * The class Facility. we add town and transportationVehicle as attributes
  */
 public class Facility {
-    private Set<TransportationVehicle> transportationVehicle;
     private String town;
+    private FilterQueue filterQueue;
+    private Set<TransportationVehicle> transportationVehicle;
 
-    public Facility(Set<TransportationVehicle> transportationVehicle, String town) {
-        this.transportationVehicle = transportationVehicle;
+    public Facility(String town, Set<TransportationVehicle> transportationVehicle) {
         this.town = town;
+        this.transportationVehicle = transportationVehicle;
+        this.filterQueue = new FilterQueue(town);
     }
 
     public Set<TransportationVehicle> getTransportationVehicle() {
-
         return transportationVehicle;
     }
 

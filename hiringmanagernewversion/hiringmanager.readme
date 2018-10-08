@@ -1,0 +1,36 @@
+I)Home page
+http://localhost:8080/home
+
+2)Careers
+http://localhost:8080/notifications/create
+
+3)Test data
+gabriela.gagea.work@gmail.com
+java developer
+Hello,
+My name is Gabriela, I want to apply for this job
+Thank you!
+
+II)Demo
+1. creez in DB tabelul gol
+DROP TABLE IF EXISTS notifications;
+create table notifications(email varchar(100), subject varchar(100), message varchar(1000), status varchar(50));
+2. ma asigur ca nu am alte proiecte deschise
+3. pornesc hiringmanager
+4. deschid in browser pagina de home
+http://localhost:8080/home
+5. apas butonul careers
+6. introduc datele clientului
+7. pornesc pagina de vizualizare a notificarilor
+http://localhost:8080/notifications
+-nu am inca clienti inregistrati
+8. dau submit la primul client
+9. revizualizam pagina de notificari a clientilor inregistrati in sistem
+-statusul notificarii la inceput este NEW iar apoi dupa 5 sec devine ANSERWED daca se reuseste trimiterea confirmarii
+de inregistrare catre client
+9. verific gmail-ul pentru raspunsul de confirmare al clientului!!!
+10. introduc datele unui alt client
+
+
+
+

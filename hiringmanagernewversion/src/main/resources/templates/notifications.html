@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org"
+>
+<style>
+body {background-color: powderblue;}
+
+
+</style>
+<head>
+    <title>Notifications</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h3>Notifications</h3>
+<table border='1px'>
+    <thead>
+    <tr>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="notification : ${notifications}">
+        <td th:text="${notification.email}">Email</td>
+        <td th:text="${notification.subject}">Subject</td>
+        <td th:text="${notification.message}">Message</td>
+        <td th:text="${notification.status}">Status</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
